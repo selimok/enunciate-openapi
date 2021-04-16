@@ -2,16 +2,16 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>dk.jyskebank.tooling.enunciate</groupId>
-    <artifactId>enunciate-openapi</artifactId>
+    <groupId>io.whizad.enunciate.libs</groupId>
+    <artifactId>enunciate-openapi-lib</artifactId>
     <name>Enunciate module for OpenAPI</name>
-    <version>1.0.9-SNAPSHOT</version>
+    <version>1.0.10</version>
 
     <properties>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
 
-        <enunciate.version>2.12.0</enunciate.version>
+        <enunciate.version>2.12.1</enunciate.version>
         <jackson.version>2.10.1</jackson.version>
         <jacksondatabind.version>2.10.5.1</jacksondatabind.version>
         <freemarker.version>2.3.23</freemarker.version>
@@ -24,6 +24,29 @@
         <junitPlatformVersion>1.5.1</junitPlatformVersion>
         <mockitoVersion>3.0.0</mockitoVersion>
     </properties>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>93080d76c1e8-releases</name>
+            <url>https://artifactory.whizad.io/artifactory/whizad-releases</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>93080d76c1e8-snapshots</name>
+            <url>https://artifactory.whizad.io/artifactory/whizad-snapshots</url>
+        </snapshotRepository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <id>snapshots</id>
+            <name>all-repos</name>
+            <url>https://artifactory.whizad.io/artifactory/all-repos</url>
+        </repository>
+    </repositories>
 
     <dependencies>
         <dependency>
